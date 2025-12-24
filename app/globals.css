@@ -1,0 +1,110 @@
+@import './styles/tokens.css';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: var(--font-family-base);
+  line-height: 1.5;
+  font-weight: var(--font-weight-normal);
+
+  /* Light color scheme */
+  color-scheme: light;
+  color: var(--color-text-primary);
+  background: var(--color-bg-body);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background: var(--color-bg-body);
+  color: var(--color-text-primary);
+}
+
+/* Typography */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--color-text-primary);
+  font-weight: var(--font-weight-semibold);
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+p {
+  line-height: 1.6;
+  color: var(--color-text-secondary);
+}
+
+/* Links */
+a {
+  font-weight: var(--font-weight-medium);
+  color: var(--color-link);
+  text-decoration: none;
+  transition: color var(--transition-fast) var(--transition-timing);
+  cursor: pointer;
+  pointer-events: auto;
+}
+
+a:hover {
+  color: var(--color-link-hover);
+  text-decoration: underline;
+}
+
+/* Buttons */
+button {
+  cursor: pointer;
+  pointer-events: auto;
+}
+
+/* Ensure all interactive elements are clickable */
+button,
+a,
+input,
+select,
+textarea,
+[role='button'],
+[role='link'] {
+  pointer-events: auto;
+  cursor: pointer;
+}
+
+/* Hide scrollbar but keep scroll functionality */
+html,
+body {
+  /* Firefox */
+  scrollbar-width: none;
+}
+
+/* WebKit browsers (Chrome, Safari, Edge) */
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+/* Prevent vertical swipe gestures for horizontal controls */
+.prevent-vertical-swipe {
+  touch-action: pan-x;
+}
