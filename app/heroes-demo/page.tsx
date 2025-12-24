@@ -1,11 +1,13 @@
 'use client';
 
 import { useState } from 'react';
+import { HeroSparkles } from '@widgets/hero-sparkles';
 import { HeroNeuralConstellation } from '@widgets/hero-neural-constellation';
 import { cn } from '@/shared/lib/utils';
 import styles from './HeroesDemo.module.css';
 
 const heroes = [
+  { id: 'sparkles', name: 'Hero Sparkles', component: HeroSparkles },
   { id: 'neural', name: 'Neural Constellation', component: HeroNeuralConstellation },
 ] as const;
 
