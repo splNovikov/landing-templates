@@ -1,0 +1,40 @@
+.container {
+  position: relative;
+}
+
+.selector {
+  position: fixed;
+  bottom: var(--space-5);
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  display: flex;
+  gap: var(--space-2);
+  padding: var(--space-2);
+  background: color-mix(in srgb, var(--color-primary) 70%, transparent);
+  backdrop-filter: blur(10px);
+  border-radius: var(--radius-lg);
+  border: 1px solid color-mix(in srgb, var(--color-secondary) 30%, transparent);
+}
+
+.button {
+  padding: var(--space-2) var(--space-4);
+  background: transparent;
+  border: 1px solid color-mix(in srgb, var(--color-text-primary) 20%, transparent);
+  border-radius: var(--radius-md);
+  color: var(--color-text-primary);
+  cursor: pointer;
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-normal);
+  transition: all var(--transition-base) var(--transition-timing);
+}
+
+.buttonActive {
+  background: color-mix(in srgb, var(--color-secondary) 30%, transparent);
+  border-color: var(--color-secondary);
+  font-weight: var(--font-weight-semibold);
+}
+
+.button:hover:not(.buttonActive) {
+  background: color-mix(in srgb, var(--color-secondary) 10%, transparent);
+}
